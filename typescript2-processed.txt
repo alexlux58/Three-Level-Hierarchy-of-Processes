@@ -1,0 +1,67 @@
+Script started on 2021-02-15 11:18:41-08:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="103" LINES="7"]
+alexlux@alexlux-VirtualBox:~/Desktop$ ls
+comp362  typescript2.txt
+alexlux@alexlux-VirtualBox:~/Desktop$ psi-elf | grep "proc_hier\|iam"
+0 S alexlux    11151   11141  0  80   0 -   622 do_wai 11:18 pts/4    00:00:00 ./proc_hier
+0 R alexlux    11152   11151 13  80   0 -   622 -      11:18 pts/4    00:00:04 iam 1
+0 R alexlux    11153   11152 13  80   0 -   622 -      11:18 pts/4    00:00:04 iam 1.1
+0 R alexlux    11154   11152 13  80   0 -   622 -      11:18 pts/4    00:00:04 iam 1.2
+0 R alexlux    11155   11154 13  80   0 -   622 -      11:18 pts/4    00:00:04 iam 1.2.1
+0 R alexlux    11156   11154 13  80   0 -   622 -      11:18 pts/4    00:00:04 iam 1.2.2
+0 R alexlux    11157   11153 13  80   0 -   622 -      11:18 pts/4    00:00:04 iam 1.1.1
+0 R alexlux    11158   11153 13  80   0 -   622 -      11:18 pts/4    00:00:04 iam 1.1.2
+0 S alexlux    11172   11160  0  80   0 -  2258 pipe_w 11:18 pts/5    00:00:00 grep --color=auto proc_hier\|iam
+alexlux@alexlux-VirtualBox:~/Desktop$ ps -elf | grep "proc_hier\|iam"
+0 S alexlux    11151   11141  0  80   0 -   622 do_wai 11:18 pts/4    00:00:00 ./proc_hier
+0 R alexlux    11152   11151 14  80   0 -   622 -      11:18 pts/4    00:00:24 iam 1
+0 S alexlux    11153   11152  9  80   0 -   622 do_wai 11:18 pts/4    00:00:16 iam 1.1
+0 R alexlux    11154   11152 14  80   0 -   622 -      11:18 pts/4    00:00:24 iam 1.2
+0 R alexlux    11155   11154 14  80   0 -   622 -      11:18 pts/4    00:00:24 iam 1.2.1
+0 R alexlux    11156   11154 14  80   0 -   622 -      11:18 pts/4    00:00:24 iam 1.2.2
+0 R alexlux    11157   11153 14  80   0 -   622 -      11:18 pts/4    00:00:24 iam 1.1.1
+0 R alexlux    11158   11153 14  80   0 -   622 -      11:18 pts/4    00:00:24 iam 1.1.2
+4 S root       11197   11186  0  80   0 -  3022 -      11:20 pts/6    00:00:00 sudo gdb -p 11153 iam
+4 S root       11198   11197  0  80   0 - 14563 -      11:20 pts/6    00:00:00 gdb -p 11153 iam
+0 S alexlux    11205   11160  0  80   0 -  2258 pipe_w 11:21 pts/5    00:00:00 grep --color=auto proc_hier\|iam
+alexlux@alexlux-VirtualBox:~/Desktop$ ps -elf | grep "proc_hier\|iam"
+0 S alexlux    11151   11141  0  80   0 -   622 do_wai 11:18 pts/4    00:00:00 ./proc_hier
+0 R alexlux    11152   11151 15  80   0 -   622 -      11:18 pts/4    00:00:43 iam 1
+0 S alexlux    11153   11152  5  80   0 -   622 do_wai 11:18 pts/4    00:00:16 iam 1.1
+0 S alexlux    11154   11152 13  80   0 -   622 do_wai 11:18 pts/4    00:00:39 iam 1.2
+0 R alexlux    11155   11154 15  80   0 -   622 -      11:18 pts/4    00:00:43 iam 1.2.1
+0 R alexlux    11156   11154 15  80   0 -   622 -      11:18 pts/4    00:00:43 iam 1.2.2
+0 R alexlux    11157   11153 15  80   0 -   622 -      11:18 pts/4    00:00:43 iam 1.1.1
+0 R alexlux    11158   11153 15  80   0 -   622 -      11:18 pts/4    00:00:43 iam 1.1.2
+4 S root       11197   11186  0  80   0 -  3022 -      11:20 pts/6    00:00:00 sudo gdb -p 11153 iam
+4 S root       11198   11197  0  80   0 - 14563 -      11:20 pts/6    00:00:00 gdb -p 11153 iam
+4 S root       11220   11209  0  80   0 -  3021 -      11:22 pts/7    00:00:00 sudo gdb -p 11154 iam
+4 S root       11221   11220  0  80   0 - 14627 -      11:22 pts/7    00:00:00 gdb -p 11154 iam
+0 S alexlux    11227   11160  0  80   0 -  2258 pipe_w 11:23 pts/5    00:00:00 grep --color=auto proc_hier\|iam
+alexlux@alexlux-VirtualBox:~/Desktop$ kill -KILL 11157 11158
+alexlux@alexlux-VirtualBox:~/Desktop$ psl-elfI|Lgrep5"proc_hier\|iam"
+0 S alexlux    11151   11141  0  80   0 -   622 do_wai 11:18 pts/4    00:00:00 ./proc_hier
+0 R alexlux    11152   11151 15  80   0 -   622 -      11:18 pts/4    00:00:53 iam 1
+0 Z alexlux    11153   11152  4  80   0 -     0 -      11:18 pts/4    00:00:16 [iam] <defunct>
+0 S alexlux    11154   11152 11  80   0 -   622 do_wai 11:18 pts/4    00:00:39 iam 1.2
+0 R alexlux    11155   11154 15  80   0 -   622 -      11:18 pts/4    00:00:53 iam 1.2.1
+0 R alexlux    11156   11154 15  80   0 -   622 -      11:18 pts/4    00:00:53 iam 1.2.2
+4 S root       11197   11186  0  80   0 -  3022 -      11:20 pts/6    00:00:00 sudo gdb -p 11153 iam
+4 S root       11198   11197  0  80   0 - 14563 -      11:20 pts/6    00:00:00 gdb -p 11153 iam
+4 S root       11220   11209  0  80   0 -  3021 -      11:22 pts/7    00:00:00 sudo gdb -p 11154 iam
+4 S root       11221   11220  0  80   0 - 14627 -      11:22 pts/7    00:00:00 gdb -p 11154 iam
+0 S alexlux    11251   11160  0  80   0 -  2258 pipe_w 11:23 pts/5    00:00:00 grep --color=auto proc_hier\|iam
+alexlux@alexlux-VirtualBox:~/Desktop$ kill -KILL 11155 11156
+alexlux@alexlux-VirtualBox:~/Desktop$ psl-elfI|Lgrep5"proc_hier\|iam"
+0 S alexlux    11151   11141  0  80   0 -   622 do_wai 11:18 pts/4    00:00:00 ./proc_hier
+0 R alexlux    11152   11151 17  80   0 -   622 -      11:18 pts/4    00:01:04 iam 1
+0 Z alexlux    11153   11152  4  80   0 -     0 -      11:18 pts/4    00:00:16 [iam] <defunct>
+0 Z alexlux    11154   11152 10  80   0 -     0 -      11:18 pts/4    00:00:39 [iam] <defunct>
+4 S root       11197   11186  0  80   0 -  3022 -      11:20 pts/6    00:00:00 sudo gdb -p 11153 iam
+4 S root       11198   11197  0  80   0 - 14563 -      11:20 pts/6    00:00:00 gdb -p 11153 iam
+4 S root       11220   11209  0  80   0 -  3021 -      11:22 pts/7    00:00:00 sudo gdb -p 11154 iam
+4 S root       11221   11220  0  80   0 - 14627 -      11:22 pts/7    00:00:00 gdb -p 11154 iam
+0 S alexlux    11254   11160  0  80   0 -  2258 pipe_w 11:24 pts/5    00:00:00 grep --color=auto proc_hier\|iam
+alexlux@alexlux-VirtualBox:~/Desktop$ exit
+exit
+
+Script done on 2021-02-15 11:26:06-08:00 [COMMAND_EXIT_CODE="0"]

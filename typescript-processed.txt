@@ -1,0 +1,28 @@
+Script started on 2021-02-15 11:18:08-08:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="103" LINES="6"]
+alexlux@alexlux-VirtualBox:~/Desktop/comp362/AlexLuxLab03/proc_hier/cmake-build-debug/bin$ ls
+iam  proc_hier	typescript.txt
+alexlux@alexlux-VirtualBox:~/Desktop/comp362/AlexLuxLab03/proc_hier/cmake-build-debug/bin$ ./proc_hier
+I am the parent 11151
+I am the child 11152
+Process 1 pid is: 11152
+I am the child 11154
+Process 1.2 pid is: 11154
+I am the child 11153
+Process 1.1 pid is: 11153
+I am the child 11158
+I am the child 11156
+Process 1.1.2 pid is: 11158
+I am the child 11157
+Process 1.1.1 pid is: 11157
+I am the child 11155
+Process 1.2.1 pid is: 11155
+Process 1.2.2 pid is: 11156
+I am the parent 11153
+I am the parent 11154
+Process 1.1 is terminating
+Process 1.2 is terminating
+^C
+alexlux@alexlux-VirtualBox:~/Desktop/comp362/AlexLuxLab03/proc_hier/cmake-build-debug/bin$ exit
+exit
+
+Script done on 2021-02-15 11:26:15-08:00 [COMMAND_EXIT_CODE="130"]
